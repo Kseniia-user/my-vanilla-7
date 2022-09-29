@@ -16,73 +16,71 @@
   </head>
 <body>
 <form>
-            <div class="form-group">
+    <div class="content">
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <from id="seaech-from" class="mb-3">
+            <div class="row">
+              <div class="col-9">
               <input
-                type="text"
+                type="search"
                 placeholder="Enter your username"
                 class="form-control"
-                autofocus
+                id="city-input"
+                autocomplete="off"
               />
             </div>
-            <div class="ul">
-            <input type="submit" value="Search" class="btn btn-success" />
-            <input type="submit" value="Current" class="btn btn-success" />
+            <div class="col-3">
+              <input 
+                type="submit" 
+                value="Search" 
+                class="btn btn-primary m-100"
+              />
             </div>
-            </form>
-            <body>
-        <div class="my-vanilla-7">
-    <h1>
-      Odessa
-    </h1>
-    <ul>
-      <li id="date">Tuesday 16:00</li>
-    </ul>
-    <div class="row">
-      <div class="col-6">
-        <div class="d-flex">
-          <img
-            src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-            alt="Cloudy icon"
-            class="weather-icon float-left"
-          />
-          <div class="float-left">
-            <span class="temperature" id="temperature">19</span
-            ><span class="units">
-              <a href="#" id="celsius-link">°C</a> |
-              <a href="#" id="fahrenheit-link">°F</a>
-            </span>
+           </div>
+          </from>
+          <div class="overview">
+            <h1 id="city">
+                Odessa
+            </h1>
+            <ul>
+              <li>
+                Last updated: <span id="data">Thursday 22:42</span>
+              </li>
+              <li id="description">
+                Broken clouds
+              </li>  
+            </ul>
           </div>
+          <div class="row">
+            <div class="col-6">
+             <div class="d-flex weather-temperature">
+                <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="Clear" id="icon" />
+             <div>
+                  <strong id="temperature">19</strong
+                  ><span class="units"> °C | 
+                    <a href="#">°F </a>
+                    </span>
+                  </div>
+                </div>
+                <div class="col-6">
+                <ul>
+                    <li>Humidity: <span id="humidity"></span>%</li>
+                    <li>Wind: <span id="wind"></span>m/h</li>
+                </ul>
+            </div>
+          </div> 
+          <div class="weather-forecast" id="forecast"></div>
+         </div> 
+         <small>
+          <a 
+            href="https://github.com/Kseniia-user/my-vanilla-7" 
+            target="_blank"
+            >Open-source code</a
+            >, by Kseniia Mostova
+        </small>  
         </div>
-      </div>
-   <from class="2">
-    <div style="float: left; width: 49%;"> Now<br>🌙<br>23°C
-    </div>
-    <div style="float: right; width: 49%;">Partly cloudy from 1:00 to 8:00 
-      <br>predominanty cloudy weather experted at 8:00
-    </div><div class="clear"></div>
-    </from>
-
-<h2>
-  Today ☁️ min 20° - max 32°
-</h2>
-<h3>
-  Mo 🌧 min 21° - max 28°
-</h3>
-<h4>
-  Tu 🌧 min 21° - max 27°
-</h4>
-<h5>
-  We ☀️ min 20° - max 27°
-</h5>
-<h6>
-  Th ☀️ min 20° - max 29°
-</h6>
-</div>
-<small>
-    <a href="https://github.com/Kseniia-user/my-vanilla-7" target="_blank"
-
-    >Open-source code</a>, by Kseniia Mostova
-</small>      
+      </div>    
     <script src="src/index.js"></script>
   </body>
 </html>
