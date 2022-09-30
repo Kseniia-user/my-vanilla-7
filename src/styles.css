@@ -25,13 +25,16 @@ li {
   list-style: none;
   margin: 0;
   padding: 0;
-  text-transform: capitalize;
   color: rgb(135, 135, 135);
   display: block;
   font-size: 16px;
   font-weight: 100;
   line-height: 19px;
   text-align: left;
+}
+
+li:first-letter {
+  text-transform: capitalize;
 }
 
 .group {
