@@ -21,18 +21,6 @@ function formatDate(timestamp) {
   let day = days[date.getDay()];
 
   return `${day} ${hours}:${minutes}`;
-  
-  
-
- 
-
-
-  let dayIndex = date.getDay();
-  let days = 
-  let day = days[dayIndex];
-
-  
-}
 
 function displayTemperature(response) {
   console.log(response.data);
@@ -61,9 +49,21 @@ function searchCity(city) {
   let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${Odessa}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
+  axios.get(apiUrl).then(displayTemperature);
 }
 
-axios.get(apiUrl).then(displayTemperature);
+function handleSubmit(event){
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-intup");
+  search(cityInputElement.value);
+}
+
+
+
+
+
+let forn = document.querySelector("#search-forn");
+forn.addEventListener("submit", handleSubmit);
 
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
@@ -75,11 +75,6 @@ function displayWeatherCondition(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
-}
-function handleSubmit(event) {
-  event.preventDefault();
-  let city = document.querySelector("#city-input").value;
-  searchCity(city);
 }
 
 function searchLocation(position) {
