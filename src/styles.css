@@ -108,3 +108,12 @@ h6 {
   line-height: 64px;
   font-weight: 400;
 }
+
+.weather-temperature .active {
+  color: #39abdb;
+  cursor: default;
+}
+
+.weather-temperature .active.hover {
+  text-decoration: none;
+}
